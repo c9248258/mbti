@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MBTI 职业性格测试共 93 题，基于四个维度计算人格类型。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MBTI 职业性格测试 - 进行中</title>
+    <link rel="shortcut icon" href="./static/img/favicon.ico">
+    <link rel="stylesheet" href="./static/css/mbti-design-system.css">
+    <script src="./static/js/common/scoring.js"></script>
+    <script src="./static/js/pages/mbti-test.js"></script>
+    <script src="./static/js/common/project-info.js"></script>
+</head>
+
+<body>
+    <nav class="mbti-nav">
+        <div class="container">
+            <a href="./index.html" class="mbti-logo">环杰 MBTI</a>
+            <ul class="mbti-nav-links">
+                <li><a href="./personality-types.html">十六种人格简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="mbti-container">
+        <div style="margin-top: 2rem;">
+            <div class="progress-info">
+                <span id="current-progress-text">第 1 题 / 共 93 题</span>
+                <span id="percentage-text">0%</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="mbti-progress"></div>
+            </div>
+        </div>
+
+        <div id="mbtiquestion" class="question-wrapper">
+            <!-- Questions will be injected here -->
+            <div style="text-align: center; padding: 3rem;">
+                <p style="color: var(--text-muted);">正在加载题库，请稍候...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mbti-footer">
+        <p>&copy; 2026 MBTI 丨惠州环球教育培训中心</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+/* 全站公共样式：统一背景图和基础间距。 */
+body {
+	background: #ddd url("/static/img/field.jpg") fixed no-repeat top left;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+footer {
+	/* 给页脚留出与主体内容的分隔空间。 */
+	margin-top: 90px;
+}
+
+.flashes {
+	/* 预留给提示消息的公共样式。 */
+	margin-top: 90px;
+	text-align: center;
+}

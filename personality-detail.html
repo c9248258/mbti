@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MBTI 人格详情页，查看各人格类型的核心特点、优势、劣势与职业方向。">
+    <title>MBTI 人格详情</title>
+    <link rel="shortcut icon" href="./static/img/favicon.ico">
+    <link rel="stylesheet" href="./static/css/mbti-design-system.css">
+    <script src="./static/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/common/project-info.js"></script>
+    <script src="./static/js/pages/personality-detail.js"></script>
+</head>
+
+<body>
+    <nav class="mbti-nav">
+        <div class="container">
+            <a href="./index.html" class="mbti-logo">环杰 MBTI</a>
+            <ul class="mbti-nav-links">
+                <li><a href="./personality-types.html">十六种人格简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="result-header">
+        <div class="mbti-container">
+            <p
+                style="text-transform: uppercase; letter-spacing: 2px; opacity: 0.7; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                测评结果</p>
+            <h1 id="personality-type" class="result-type-code">环杰学堂MBTI测试</h1>
+            <p id="personality-subtitle" class="result-subtitle">人格详情加载中</p>
+
+            <!-- 新增：页面内直接显示的真实权重进度条 -->
+            <div id="page-traits" class="page-traits-container animate-fade-in" style="display: none;">
+                <!-- 由 JS 动态填充 -->
+            </div>
+        </div>
+    </header>
+
+    <main class="mbti-container">
+        <div class="content-card animate-fade-in">
+            <article id="personality-content">
+                <p>正在深度分析您的人格特质，请稍候...</p>
+            </article>
+        </div>
+
+        <div class="action-bar">
+            <a href="./mbti-test.html" class="btn-primary">重新测试</a>
+            <button id="share-btn" class="btn-outline"
+                style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                生成分享海报
+            </button>
+            <a href="./personality-types.html" class="btn-outline">查看所有人格</a>
+        </div>
+    </main>
+
+    <!-- 分享海报模态框 -->
+    <div id="share-modal" class="share-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="poster-result">
+                <!-- 生成的图片将显示在这里 -->
+                <p style="padding: 2rem;">海报生成中...</p>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">长按图片保存或转发给朋友</p>
+        </div>
+    </div>
+
+    <!-- 海报模板 (默认隐藏) -->
+    <div id="poster-template" class="poster-template">
+        <div class="poster-body">
+            <img src="./static/img/logo.png" alt="Logo" class="poster-top-logo">
+            <img src="./static/img/bc.png" alt="" class="poster-bg-img">
+            <div class="poster-header">
+                <div class="poster-type-code" id="poster-type">INTJ</div>
+                <div class="poster-subtitle" id="poster-subtitle">专家（策略家）型人格</div>
+            </div>
+
+            <div class="poster-traits" id="poster-traits">
+                <span class="trait-tag">内向</span>
+                <span class="trait-tag">直觉</span>
+                <span class="trait-tag">思考</span>
+                <span class="trait-tag">判断</span>
+            </div>
+
+            <div class="poster-description" id="poster-desc">
+                INTJ型的人是完美主义者。他们强烈地要求个人自由和能力，同时在他们独创的思想中，不可动摇的信仰促使他们达到目标。
+            </div>
+            <div class="poster-footer">
+                <div class="poster-branding">
+                    <div class="poster-branding-text">
+                        <div class="poster-site-name">MBTI 职业性格测试</div>
+                        <div class="poster-tagline">探索内在自我 · 规划职业未来</div>
+                    </div>
+                </div>
+                <div class="poster-qr">
+                    <img id="poster-qrcode" src="" alt="QR Code" style="width: 60px; height: 60px;">
+                    <p style="font-size: 0.5rem; color: #999; margin-top: 4px; text-align: center;">扫码测评</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <footer class="mbti-footer">
+        <p>&copy; 2026 MBTI 丨惠州环球教育培训中心</p>
+    </footer>
+</body>
+
+</html>

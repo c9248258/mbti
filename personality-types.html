@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="查看 MBTI 十六型人格简介，包括各人格类型的核心特点、性格倾向与详细解析入口。">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MBTI 十六种人格简介</title>
+    <link rel="shortcut icon" href="./static/img/favicon.ico">
+    <link rel="stylesheet" href="./static/css/mbti-design-system.css">
+    <script src="./static/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="./static/js/common/project-info.js"></script>
+    <script src="./static/js/pages/personality-index.js"></script>
+</head>
+
+<body>
+    <nav class="mbti-nav">
+        <div class="container">
+            <a href="./index.html" class="mbti-logo">环杰 MBTI</a>
+            <ul class="mbti-nav-links">
+                <li><a href="./personality-types.html">十六种人格简介</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="mbti-container">
+        <header class="hero-section animate-fade-in">
+            <h1 class="hero-title">十六种人格简介</h1>
+            <p class="hero-subtitle">
+                MBTI 模型将人格分为四个维度，组合成 16 种独特的性格类型。点击卡片深入了解每种人格的特质、优势与职业建议。
+            </p>
+        </header>
+
+        <div id="grid" class="types-grid animate-fade-in">
+            <!-- Cards will be injected here -->
+            <p style="text-align: center; grid-column: 1/-1; padding: 4rem; color: var(--text-muted);">
+                正在加载人格数据...
+            </p>
+        </div>
+    </main>
+
+    <footer class="mbti-footer">
+        <p>&copy; 2026 MBTI 丨惠州环球教育培训中心</p>
+    </footer>
+</body>
+
+</html>
